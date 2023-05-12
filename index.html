@@ -1,0 +1,30 @@
+<!DOCTYPE.html>
+<script>
+let progress = 0;
+let AI2timer = 0;
+const ctx = document.getElementById('canvas').getContext('2d')
+function movemouse(event) {
+		let mouseX = event.clientX
+		let mouseY = event.clientY
+		mouse = document.getElementById('mousecursor')
+		mouse.style.display = 'initial'
+		mouse.style.top = `${event.clientY - 10}px`
+		mouse.style.left = `${event.clientX - 10}px`
+		document.getElementById('AI1').style.top = `${event.clientY - 42}px`
+		document.getElementById('AI1').style.left = `${event.clientX - 150}px`
+}
+</script>
+
+<body onmousemove = 'movemouse(event)' onload = 'fadein()'>
+	<link href="https://fonts.cdnfonts.com/css/pf-tempesta-five" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<img src = './images/cursornormal.png' id = 'mousecursor' style = 'display:none;'></img>
+	<!-- <div id = 'background' onmouseover = "setMouse('normal')"></div> -->
+	<div id = 'screenfade'></div>
+	<div id = 'AI1'></div>
+	<div id = 'AI2' onmouseover = 'setMouse("interact")'>tomato</div>
+	<canvas width = '9000px' height = '9000px' id = 'canvas' onmouseover = 'setMouse("hiding")'></canvas>
+	<div id = 'selectbox' onmouseover = "setMouse('select')" style = 'top: 250px; left: 600px;' onclick = 'die(); setMouse("normal")'></div>
+	
+</body>
+<script src='js/mousegame.js'></script>
